@@ -1,0 +1,238 @@
+\documentclass[11pt, letterpaper]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{tikz}
+\input{glyphtounicode}
+
+%-----FONT OPTIONS-------------------------------------------------------------
+% serif
+ \usepackage{palatino}
+% \usepackage{times} %This is the default as well
+% \usepackage{charter}
+
+% sans-serif
+% \usepackage{helvet}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+%-----PAGE SETUP---------------------------------------------------------------
+% Margins for US Letter size
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0cm}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that .pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-----CUSTOM COMMANDS FOR FORMATTING SECTIONS----------------------------------
+\newcommand{\CVItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\CVSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \small#3 & \small #4 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\CVSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \text{\small#1} & \text{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\CVSubItem}[1]{\CVItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\CVSubHeadingListStart}{\begin{itemize}[leftmargin=0.5cm, label={}]}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]} % Uncomment for US
+\newcommand{\CVSubHeadingListEnd}{\end{itemize}}
+\newcommand{\CVItemListStart}{\begin{itemize}}
+\newcommand{\CVItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%------------------------------------------------------------------------------
+% CV STARTS HERE  %
+%------------------------------------------------------------------------------
+\begin{document}
+
+%-----HEADING------------------------------------------------------------------
+\begin{minipage}[c]{0.05\textwidth}
+\-\
+\end{minipage}
+\begin{minipage}[c]{0.2\textwidth}
+\begin{tikzpicture}
+    \clip (0,0) circle (1.75cm);
+    \node at (0,-.7) {\includegraphics[width = 3cm]{portrait}}; 
+    % if necessary the picture may be moved by changing the at (coordinates)
+    % width defines the 'zoom' of the picture
+\end{tikzpicture}
+\hfill\vline\hfill
+\end{minipage}
+\begin{minipage}[c]{0.4\textwidth}
+    \textbf{\Huge \scshape{Jarrod Rother}} \\ \vspace{1pt} 
+    % \scshape sets small capital letters, remove if desired
+    \small{(570) 449-1946} \\
+    \href{mailto:JARRODROTHER@JKRNET.ORG}{\underline{JARRODROTHER@JKRNET.ORG}}\\
+    % Be sure to use a professional *personal* email address
+    \href{https://www.linkedin.com/in/jarrodrother/}{\underline{Linkedin.com/in/JarrodRother/}} \\
+    % you should adjust you linked in profile name to be professional and recognizable
+    \href{https://github.com/JarrodR87}{\underline{GitHub.com/JarrodR87}}\\
+    \small{Active Secret Security Clearance}
+\end{minipage}
+
+
+% Without picture
+%\begin{center}
+%  \textbf{\Huge \scshape ROTHER, JARROD} \\ \vspace{1pt} %\scshape sets small capital letters, remove if desired
+%   \small (570)449-1946 $|$ 
+%   \href{mailto:JARRODROTHER@JKRNET.ORG}{\underline{JARRODROTHER@JKRNET.ORG}} $|$\\
+%   % Be sure to use a professional *personal* email address
+%   \href{https://www.linkedin.com/in/jarrodrother/}{\underline{Linkedin.com/in/JarrodRother/}} $|$
+%   % you should adjust you linked in profile name to be professional and recognizable
+%   \href{https://github.com/JarrodR87}{\underline{GitHub.com/JarrodR87}}
+%\end{center}
+
+
+%-----WORK EXPERIENCE----------------------------------------------------------
+\section{Work Experience}
+  \CVSubHeadingListStart
+%    \CVSubheading %Example
+%      {What you did}{When you worked there}
+%      {Who you worked for}{Where they are located}
+%      \CVItemListStart
+%        \CVItem{Why it is important to this employer}
+%      \CVItemListEnd
+    \CVSubheading
+      {SENIOR SYSTEMS ADMINISTRATOR}{12/3/2018 -- PRESENT}
+      {Knowles Precision Devices}{Cazenovia, NY}
+      \CVItemListStart
+        \CVItem{Deployed and maintained multiple hyperconverged clusters running VMware on Nutanix}
+        \CVItem{Managed multiple Active Directory Domains in a complex Domain Trust}
+        \CVItem{Implemented MobileIron Cloud for Mobile Device Management}
+        \CVItem{Redesigned and completed a rebuild of the Microsoft SQL Servers in multiple locations}
+        \CVItem{Consolidated Active Directory Domains into a single unified Domain}
+        \CVItem{Implemented a YSoft SafeQ secure printing solution}
+        \CVItem{Automated multiple administrative tasks with PowerShell and Jenkins}
+        \CVItem{Created PowerShell Modules and scripts to aid automation and the IT Team}
+        \CVItem{Decommissioned IT infrastructure for a closed facility}
+        \CVItem{Deployed and maintained a Git version control solution for the IT Team}
+        \CVItem{Replaced legacy Servers with Server 2016 Core where possible}
+        \CVItem{Trained the team on PowerShell, Server Core, Server Manager, Windows Admin Center, and more}
+        \CVItem{Interviewed and assisted in the selection of new team members in multiple locations}
+        \CVItem{Mentored the team and acted as technical lead for the IT infrastructure}
+      \CVItemListEnd
+    \CVSubheading
+      {SYSTEM ADMINISTRATOR II}{11/27/2017 -- 10/22/2018}
+      {Frederick County Public Schools}{Frederick, MD}
+      \CVItemListStart
+        \CVItem{Deployed multiple Windows Server 2016 and CentOS environments}
+        \CVItem{Implemented Change Control for Group Policy using Advanced Group Policy Management (AGPM)}
+        \CVItem{Setup services to use Group Managed Service Accounts (GMSA)}
+        \CVItem{Created automation tools in PowerShell to ease administrative overhead}
+        \CVItem{Documented physical and logical layouts for planned and completed projects}
+        \CVItem{Designed software packages to deploy via System Center Configuration Manager (SCCM)}
+        \CVItem{Implemented SharePoint Data Loss Prevention (DLP) rules to protect sensitive data}
+        \CVItem{Deployed MediaWiki for internal documentation}
+        \CVItem{Migrated an IP Database for IP Address Management (IPAM) to PHPIPAM from a custom solution}
+    \CVItemListEnd
+    \CVSubheading
+      {NETWORK ADMINISTRATOR II}{9/1/2014 -- 11/17/2017}
+      {Vectron International}{Mount Holly Springs, PA}
+      \CVItemListStart
+        \CVItem{Created internal documentation using MediaWiki}
+        \CVItem{Deployed multiple Windows Server 2003-2012 R2 and ESXi/vCenter environments}
+        \CVItem{Provided customer service and support in a highly-virtualized infrastructure running on VMware}
+        \CVItem{Designed and implemented Group Policies to assist with automation and uniformity}
+        \CVItem{Automated installations and common administrative tasks using WSUS and PDQ Inventory/Deploy as well as various scripts}
+        \CVItem{Migration of multiple servers from Windows Server 2000-2003 to Windows Server 2008-2012 R2}
+        \CVItem{Provisioning and maintenance of multiple HP/Fujitsu SAN’s}
+        \CVItem{Migrated a global Exchange environment from Exchange 2003 to Exchange 2010}
+        \CVItem{Migrated SharePoint from 2003 to 2013}
+        \CVItem{Complied with Sarbanes-Oxley(SOX) for compliance and security auditing}
+        \CVItem{Utilized time management and prioritization to handle multiple simultaneous tasks}
+        \CVItem{Delivered presentations regarding Information Security to specialized and non-specialized audiences}
+        \CVItem{Led and participated in teams to accomplish worldwide projects}
+      \CVItemListEnd
+  
+
+    \CVSubheading
+     {Helpdesk Technician}{3/19/2012 -- 9/1/2014}{Vectron International}{Mount Holly Springs, PA}
+    \CVItemListStart
+        \CVItem{Onsite and remote desktop and laptop support and maintenance}
+        \CVItem{Supported internal applications and intranet sites}
+        \CVItem{Managed internal software licenses and audited them for compliance}
+    \CVItemListEnd
+    
+    
+    \CVSubheading
+      {Helpdesk Technician I}{2/1/2009 -- 3/16/2012}
+      {C3i Inc.}{Wilkes-Barre, PA}
+      \CVItemListStart
+        \CVItem{Assisted remote users with resolving various software/laptop issues}
+        \CVItem{Supported client specific web applications and intranet pages}
+        \CVItem{Handled orders for equipment repairs and replacement}
+    \CVItemListEnd
+\CVSubHeadingListEnd
+
+%-----EDUCATION----------------------------------------------------------------
+\section{Education}
+  \CVSubHeadingListStart
+%    \CVSubheading % Example
+%      {Degree Achieved}{Years of Study}
+%      {Institution of Study}{Where it is located}
+    \CVSubheading
+      {{Associate of Science in Information Sciences and Technology (21ST) $|$
+      \small{Baccalaureate Option}}}{2019 -- 2021}
+      {The Pennsylvania State University}{World Campus}
+    \CVSubheading
+      {{A.A.S. Computer Specialist – Server/Client Administration }}{2005 -- 2008}
+      {Lehigh Carbon Community College }{Schnecksville, PA}
+    
+  \CVSubHeadingListEnd
+
+%-----SKILLS-------------------------------------------------------------------
+\begin{comment}
+This section is compressed from the various skills sections that Euro CV
+recommends.
+\end{comment}
+
+\section{Skills}
+ \begin{enumerate}
+ [leftmargin=0.5cm, label={}]
+    \item{MCSA – 8/7/14}
+    \item{A+ - 2/25/07}
+    \item{VMware VCA-DCV – 11/2/13}
+    \item{Six Sigma White Belt – 10/4/16}
+    \item{LOPSA Member – 4/16/18}
+    
+\end{enumerate}
+    
+%------------------------------------------------------------------------------
+\end{document}
